@@ -1,6 +1,6 @@
 $TTL 86400
 @   IN  SOA ns1.lab.local. admin.lab.local. (
-        2026111801
+        2026111802
         3600
         1800
         604800
@@ -8,6 +8,19 @@ $TTL 86400
 )
 
 @       IN  NS      ns1.lab.local.
+
+; A records
+@       IN  A       127.0.0.1
 ns1     IN  A       127.0.0.1
 www     IN  A       127.0.0.1
-@       IN  A       127.0.0.1
+mail    IN  A       127.0.0.1
+
+; AAAA records - local IPv6 loopback testing
+ns1     IN  AAAA    ::1
+www     IN  AAAA    ::1
+
+; CNAME record
+ftp     IN  CNAME   www.lab.local.
+
+; MX record
+@       IN  MX      10 mail.lab.local.

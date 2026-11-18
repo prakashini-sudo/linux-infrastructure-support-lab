@@ -1,0 +1,11 @@
+$TTL 86400
+@   IN  SOA ns1.lab.local. admin.lab.local. (
+        2026111802
+        3600
+        1800
+        604800
+        86400
+)
+
+@   IN  NS      ns1.lab.local.
+1   IN  PTR     ns1.lab.local.

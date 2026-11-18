@@ -1,4 +1,10 @@
 zone "lab.local" {
     type master;
     file "/etc/bind/db.lab.local";
+    allow-update { none; };
+};
+
+zone "0.0.127.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.127";
 };
